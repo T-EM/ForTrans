@@ -4,12 +4,14 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 3rem;
 }
 
 .footer {
@@ -60,9 +62,11 @@
   background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+  box-shadow: 0px 5px 10px 1px;
+  cursor: pointer;
 }
 
 .grid {
@@ -83,6 +87,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  box-shadow: 0px 5px 5px 1px;
 }
 
 .card:hover,
@@ -116,14 +121,57 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
+}
+
+.mainnav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.mainnav ul li {
+  margin: 0 24px;
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.mainnav ul li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: magenta;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.mainnav ul li:hover {
+  color: magenta;
+  font-size: large;
+  font-weight: bolder;
+  /* text-decoration: underline; */
+}
+
+.mainnav ul li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
