@@ -28,6 +28,21 @@ h3 {
   position: relative;
 } */
 
+.beta {
+  position: fixed;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  border-color: black;
+  box-shadow: 2px 2px 3px;
+  text-align: center;
+  right: 40px;
+  bottom: 40px;
+  font-size: large;
+  padding: 10px;
+  transition: 1000ms;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -36,5 +51,19 @@ h3 {
   body {
     color: white;
     background: black;
+  }
+
+  .beta {
+    border-color: whitesmoke;
+  }
+}
+
+@media (max-width: 600px) {
+  .beta {
+    font-size: smaller;
+    right: 10px;
+    top: 10px;
+    bottom: auto;
+    padding: 5px;
   }
 }

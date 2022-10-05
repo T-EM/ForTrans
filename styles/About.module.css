@@ -9,3 +9,24 @@
     justify-content: flex-start;
     padding-top: 3rem;
 }
+
+.container {
+    justify-content: left;
+    align-items: left;
+}
+
+.container h2 {
+    font-size: 2rem;
+}
+
+.contactpara a {
+    color: cyan;
+    font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+    .main {
+        margin-left: 26px;
+        max-width: 90vw;
+    }
+}

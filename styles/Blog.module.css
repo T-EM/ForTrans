@@ -25,3 +25,10 @@
     color: cyan;
     font-weight: bold;
 }
+
+@media (max-width: 600px) {
+    .main {
+        max-width: 90vw;
+        margin-left: 10px;
+    }
+}
