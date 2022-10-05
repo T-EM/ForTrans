@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* <NextNProgress color="magenta" /> */}
-      <div className="beta">Beta State</div>
+      <div className="beta">In Production</div>
       <Navbar />
 
       <Component {...pageProps} />
